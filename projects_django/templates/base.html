@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ {% load bootstrap5 %}
+ {% bootstrap_css %}
+ {% bootstrap_javascript %}
+ {% bootstrap_messages %}
+ <title>Bootstrap Navbar</title>
+</head>
+<header>
+    {% block navbar %}
+        {% include 'layout.html' %}
+    {% endblock %} 
+</header>
+<body>
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+    {% include 'footer.html' %}
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

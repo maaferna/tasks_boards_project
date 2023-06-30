@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2> Listado de tableros </h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for i in board_list %}
+            <tr>
+                <td>{{ i.titulo }}</td>
+                <td>{{ i.descripcion }}</td>
+                <td>{{ i.valor }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

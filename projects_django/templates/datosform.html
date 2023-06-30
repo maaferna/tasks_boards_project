@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+        <style> .i-am-centered { margin: auto; max-width: 300px; padding-top: 20%;}
+        </style>
+    </head>
+
+    <body>
+        <h1>FROM FORM MODEL</h1>
+        <form method="POST">
+            {% csrf_token %} 
+            {{ form.as_p }}
+            <input type="submit" value="Submit"/>
+        </form>
+
+        <form action = "" method = "get">
+            {% csrf_token %}
+            <label for="tu_nombre">Tu nombre: </label>
+            <input id="tu_nombre" type="text" name="tu_nombre">
+            <input type="submit" value="OK">
+        </form>
+
+        <div class="i-am-centered">
+            <form action="" method="post">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label>Nombres </label>
+                    {{ form.nombres }}
+                </div>
+                <div class="form-group">
+                    <label>Apellidos </label>
+                    {{ form.apellidos }}
+                </div>
+                <div class="form-group">
+                    <label>Prioridad</label>
+                    {{ form.prioridad }}
+                </div>
+                <div class="form-group">
+                    <label>Contraseña:</label>
+                    {{ form.contrasenna }}
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+
+    </body>
+</html>

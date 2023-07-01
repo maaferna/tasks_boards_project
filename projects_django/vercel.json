@@ -14,8 +14,8 @@
             ],
   "routes": [
             {
-              "src": "/static/(.*)",
-              "dest": "/static/$1"
+              "src": "projects_django/static/(.*)",
+              "dest": "projects_django/static/$1"
             },
             {
               "src": "/(.*)",

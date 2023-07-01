@@ -1,26 +1,26 @@
 {
   "builds": [
-    {
-      "src": "todolist/wsgi.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles"
-      }
-    }
-  ],
+              {
+                "src": "projects_django/wsgi.py",
+                "use": "@vercel/python"
+              },
+              {
+                "src": "build_files.sh",
+                "use": "@vercel/static-build",
+                "config": {
+                  "distDir": "staticfiles"
+                }
+              }
+            ],
   "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "todolist/wsgi.py"
-    }
-  ],
+            {
+              "src": "projects_django/static/(.*)",
+              "dest": "projects_django/static/$1"
+            },
+            {
+              "src": "/(.*)",
+              "dest": "projects_django/wsgi.py"
+            }
+          ],
   "outputDirectory": "staticfiles"
 }

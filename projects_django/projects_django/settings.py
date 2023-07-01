@@ -129,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = "projects_django/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "projects_django/static")]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', "static")
 
 
 # Default primary key field type
